@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install beautifulsoup4
     - name: Make script exe
-      run: chmod +x scripts/clean_url.sh
+      run: chmod +x /home/runner/work/news.toulouse.social/news.toulouse.social/scripts/clean_url.sh
     - name: Run main.py
       run: |
         python scripts/python.py index.html
