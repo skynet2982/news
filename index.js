@@ -33,6 +33,10 @@ Promise.all(promises).then((feeds) => {
   let output = ``;
 
   feeds.forEach((feed) => {
+    feed.items.sort((a, b) => a.pubDate - b.pubDate);
+  });
+  
+  feeds.forEach((feed) => {
     output += `<section class="row">`;
       output += `<div class="col">`;
         output += `<h2 class="h3">${feed.title}</h2>`;
