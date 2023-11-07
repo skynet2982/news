@@ -1,8 +1,6 @@
 name: Clear URLS
 on:
-  push:
-    branches:
-      - deployment
+  deployment
 
 jobs:
   build:
