@@ -33,7 +33,13 @@ Promise.all(promises).then((feeds) => {
   let output = ``;
 
   feeds.forEach((feed) => {
-    feed.items.sort((a, b) => a.pubDate - b.pubDate);
+    feed.items.sort(function(a, b) {
+      // Convert the date strings to Date objects
+      let dateA = new Date(a.pubDate).toLocaleString("fr-FR", {timeZone: "Europe/Paris"});
+      let dateB = new Date(b.pubDate).toLocaleString("fr-FR", {timeZone: "Europe/Paris"});
+
+      // Subtract the dates to get a value that is either negative, positive, or zero
+      return dateA - dateB;
   });
   
   feeds.forEach((feed) => {
