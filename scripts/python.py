@@ -10,7 +10,7 @@ args = parser.parse_args()
 
 
 def clearUrl(url):
-  redirection=subprocess.check_output(["clean_url.sh", url])
+  redirection=subprocess.check_output(["/home/runner/work/news.toulouse.social/news.toulouse.social/clean_url.sh", url])
   return redirection.decode('utf-8')
 
 def replace(site):
