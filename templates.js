@@ -5,8 +5,8 @@ module.exports.document = function (body) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A single place to check all my daily news sites in 1 go">
-    <title>Daily Digest</title>
+    <meta name="description" content="Extrait de la section Toulouse de Google Actualités">
+    <title>Actualités Toulouse</title>
     <link type="text/css" rel="stylesheet" href="./styles.css" media="all">
   </head>
   <body>
@@ -14,24 +14,18 @@ module.exports.document = function (body) {
       <header class="bg-dark mb-4">
         <nav class="container navbar navbar-dark">
         <div class="container-fluid">
-          <h1 class="text-light h2 mb-0">Daily Digest</h1>
-          <a rel="noopener" href="https://github.com/quicoto/news-digest" class="text-light" title="See repository on Github">Github</a>
+          <h1 class="text-light h2 mb-0">Actualités Toulouse</h1>
         </div>
         </nav>
       </header>
       <div class="container mb-3">
         <div class="row mb-3">
           <div class="col">
-            <strong>Updated</strong>: ${new Date()}
+            <strong>Dernière mise à jour</strong>: ${new Date()}
           </div>
         </div>
         ${body}
       </div>
-      <footer class="bg-dark text-light p-4">
-        <div class="container text-center">
-          Made with <span class="pe-1">❤️</span> by <a class="text-light" href="https://ricard.blog/" title="Ricard Torres Blog">Ricard Torres</a>
-        </div>
-      </footer>
     </main>
   </body>
   </html>`;
