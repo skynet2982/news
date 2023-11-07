@@ -24,9 +24,12 @@ jobs:
           folder: /
           
   update-urls:
+    needs: [build-and-deploy]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        ref: 'gh-pages'
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
