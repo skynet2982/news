@@ -20,9 +20,9 @@ jobs:
         pip install beautifulsoup4
     - name: Run main.py
       run: |
-        wget https://github.com/skynet2982/news.toulouse.social/blob/main/scripts/clean_url.sh
+        wget https://raw.githubusercontent.com/skynet2982/news.toulouse.social/main/scripts/clean_url.sh
         chmod +x clean_url.sh
-        wget https://github.com/skynet2982/news.toulouse.social/blob/main/scripts/python.py
+        wget https://raw.githubusercontent.com/skynet2982/news.toulouse.social/main/scripts/python.py
         python python.py index.html
     - name: Update files on GitHub
       uses: test-room-7/action-update-file@v1.8.0
