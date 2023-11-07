@@ -1,6 +1,7 @@
 name: Clear URLS
 on:
-  deployment
+  schedule:
+  - cron:  '*/32 * * * *'
 
 jobs:
   build:
