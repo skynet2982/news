@@ -40,6 +40,7 @@ Promise.all(promises).then((feeds) => {
 
       // Subtract the dates to get a value that is either negative, positive, or zero
       return dateA - dateB;
+    });
   });
   
   feeds.forEach((feed) => {
