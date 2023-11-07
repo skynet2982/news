@@ -19,7 +19,7 @@ function createFile(fileName, data) {
 function itemTemplate(item) {
   return `<li class="mb-1">
     <a rel="noopener" target="_blank" href="${item.link}" title="${item.title}">${item.title}</a>
-    <time datetime="${item.pubDate}" class="ps-2 small">${item.pubDate}</time>
+    <time datetime="${new Date(item.pubDate).toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}" class="ps-2 small">${new Date(item.pubDate).toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}</time>
   </li>`
 }
 
