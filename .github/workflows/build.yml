@@ -21,6 +21,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           BRANCH: gh-pages
+          folder: /
           
   update-urls:
     runs-on: ubuntu-latest
