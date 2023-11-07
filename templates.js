@@ -21,7 +21,7 @@ module.exports.document = function (body) {
       <div class="container mb-3">
         <div class="row mb-3">
           <div class="col">
-            <strong>Dernière mise à jour</strong>: ${new Date()}
+            <strong>Dernière mise à jour</strong>: ${new Date().toLocaleString("fr-FR", {timeZone: "Europe/Paris"})}
           </div>
         </div>
         ${body}
