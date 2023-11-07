@@ -20,10 +20,10 @@ jobs:
         pip install beautifulsoup4
     - name: Run main.py
       run: |
-        python scripts/python.py dist/index.html
+        python scripts/python.py index.html
     - name: Update files on GitHub
       uses: test-room-7/action-update-file@v1.8.0
       with:
-        file-path: dist/index.html
+        file-path: index.html
         commit-msg: update index.html
         github-token: ${{ secrets.GITHUB_TOKEN }}
