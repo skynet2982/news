@@ -24,6 +24,7 @@ def replace(site):
   return soup
 
 def override(site, clearedHtml):
+  print(str(clearedHtml))
   f=open(site, 'w')
   f.truncate(0)
   f.write(str(clearedHtml))
