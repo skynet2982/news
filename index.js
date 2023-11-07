@@ -37,7 +37,7 @@ Promise.all(promises).then((feeds) => {
       output += `<div class="col">`;
         output += `<h2 class="h3">${feed.title}</h2>`;
         output += '<ul class="mb-4">';
-        output += feed.items.slice(0, 10).map(itemTemplate).join('');
+        output += feed.items.slice(0, 20).map(itemTemplate).join('');
         output += '</ul>';
       output += `</div>`;
     output += `</section>`;
