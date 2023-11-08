@@ -6,7 +6,7 @@ on:
   schedule:
       - cron: "*/30 * * * *"
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -17,9 +17,14 @@ jobs:
         run: |
           npm ci --omit=dev
           npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          BRANCH: gh-pages
+          folder: dist
           
   update-urls:
-    needs: [build]
+    needs: [build-and-deploy]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -49,13 +54,3 @@ jobs:
         branch: gh-pages
         commit-msg: update index.html
         github-token: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy:
-    needs: [update-urls]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          BRANCH: gh-pages
-          folder: dist
