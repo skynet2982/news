@@ -6,6 +6,7 @@ module.exports.document = function (body) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Extrait de la section Toulouse de Google Actualités">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2537/2537856.png">
     <title>Actualités Toulouse</title>
     <link type="text/css" rel="stylesheet" href="./styles.css" media="all">
   </head>
