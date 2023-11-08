@@ -21,7 +21,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           BRANCH: gh-pages
-          folder: /
+          folder: dist
           
   update-urls:
     needs: [build-and-deploy]
